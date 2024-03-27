@@ -1,0 +1,23 @@
+#IMAGEM OFICIAL DO .NET8 QUE CONTEM O SDK
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+
+#DEFINE O CAMINHO ONDE AS AÇÕES OCORRERÃO
+WORKDIR /App
+
+# COPIA DIRETÓRIO ATUAL PARA A IMAGEM
+COPY . ./
+# RESTORE DAS CAMADAS
+RUN dotnet restore
+# BUILD DA APLICAÇÃO
+RUN dotnet publish -c Release -o out
+
+# FAZ O BUILD DE UMA NOVA IMAGEM, MAXIMIZANDO BUILD TIME E ESPAÇO
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build-env /App/out .
+
+# LIBERA AS PORTAS A SEREM ACESSADAS, E EXECUTA O SERVER
+EXPOSE 8080
+EXPOSE 8081
+ENTRYPOINT ["dotnet", "HourlyLog.API.dll"]
+

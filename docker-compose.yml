@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  hourlylogapi:
+    container_name: hourlylogapi
+    build: ./Hourlylog.API
+    image: hourlogapi:latest
+    volumes:
+      - ./HourlyLog.API/appsettings.json:/app/appsettings.json
+    depends_on:
+      - hourlylogdatabase
+    ports:
+      - "8080:8080"
+
+
+  hourlylogdatabase:
+    container_name: hourlylogdatabase
+    hostname: hourlylogdatabase
+    image: c4st4nha/hourlylogdb:latest
+    ports:
+      - "1433:1433"
