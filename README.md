@@ -1,23 +1,22 @@
 # HourlyLog
 
-Aplicação para cadastro e registro de ponto dos colaboradores.
+Aplicação para gerenciamento de colaboradores com registro de ponto.
 
 ## 🚀 Começando
 
 As seguintes instruções tem como objetivo final a execução da aplicação e também explicar o funcionamento do ambiente de desenvolvimento.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
-### 📋 Pré-requisitos
+### 📋 Informações prévias 
 O sistema HourlyLog pode ser executado de duas maneiras distintas: utilizando contêineres ou localmente. Ambas as formas de execução dependem de um conjunto de pré-requisitos essenciais para o funcionamento adequado do sistema.
 
-Pré-requisitos da Aplicação:
+Estrutura da aplicação:
 
 Banco de Dados SQL Server em Docker: Independentemente do método de execução escolhido, o HourlyLog utiliza um banco de dados SQL Server que roda em um contêiner Docker. Isso garante a portabilidade e a facilidade de configuração do banco de dados, além de oferecer um ambiente isolado e consistente para o armazenamento de dados.
 
 .NET Core 8: A lógica de negócios do HourlyLog é gerenciada por uma API desenvolvida em .NET Core 8.
 
-Front-end Utilizando Angular 17: O front-end do HourlyLog é construído com Angular 17.
+Front-end em Angular: O front-end do HourlyLog é construído com Angular 17.
 
 Execução em Contêineres:
 
@@ -29,91 +28,84 @@ A execução local do HourlyLog é ideal para desenvolvimento e testes. Neste ce
 
 Em ambos os casos, é importante garantir que todas as dependências estejam corretamente instaladas e configuradas para que o sistema funcione como esperado. A documentação detalhada e um guia de instalação passo a passo são essenciais para auxiliar os usuários na configuração do HourlyLog, seja em contêineres ou localmente.
 
-### 📋 Pré-requisitos para execução em Docker:
+### 📋 Pré-requisitos para executar a aplicação em Docker:
 ```
 Docker: 23.0 
 Node: 20.11.1
-Visual Studio Code ou Visual Studio
 ```
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+1.Primeiramente devemos fazer o clone do projeto:
 
 ```
-Dar exemplos
+https://github.com/Cast4nha/HourlyLogV1.git
 ```
 
-E repita:
+2.Deve-se ter a seguinte estrutura de diretórios:
 
 ```
-Até finalizar
+HourlyLogV1
+        |    HourlyLog.API
+        |    HourlyLog.Client
 ```
+3.Entre na pasta HourlyLogV1 pelo terminal.
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
+4.Em seguida acesse o diretório HourlyLog.Client:
 
 ```
-Dar exemplos
+cd .\HourlyLog.Client\
 ```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
+5.Instale as dependências do projeto
 
 ```
-Dar exemplos
+npm install
 ```
 
-## 📦 Implantação
+6.Após o exito na instalação, retorne para o diretório raiz:
+```
+cd ..
+```
+7.Ative o docker se necessário e execute o comando:
+```
+docker compose up
+```
+Utilize a flag -d caso não deseje visualizar logs de execução.
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+8.Retorne para o diretório da aplicação:
+```
+cd .\HourlyLog.Client\
+```
+9.Execute a aplicação:
+```
+ng serve
+```
+10.Acesse o sistema pelo navegador:
+```
+localhost:4200/
+```
+Ao visualizar a página inicial, acesse a opção Cadastro de Colaboradores, faça o seu cadastro e em seguida clique na barra de navegação e registre o seu ponto.
 
-## 🛠️ Construído com
+Para mais informações veja uma breve [Apresentação do Projeto.](https://docs.google.com/presentation/d/1lVBb2QoZPdWlsWUgMLOu0f7ERJL9qIXA74YjuFAK_Js/edit?usp=sharing)
 
-Mencione as ferramentas que você usou para criar seu projeto
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
 
-## 🖇️ Colaborando
+## 🛠️ Ambiente de desenvolvimento
 
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
+Foram utilizadas as seguintes ferramentas para construir este projeto
+```
+.NET: 8.0
+Angular: 17.0
+Docker: 23.0 
+Node: 20.11.1
+Bootstrap 5.3.3
+Entity Framework Core (Configurado globalmente)
+Visual Studio Code e Visual Studio
+Datagrip: 2023.4 (Ou SGBD de prefêrencia)
+```
+
 
 ## 📌 Versão
 
 Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
-
----
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
