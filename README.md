@@ -90,7 +90,7 @@ Para mais informações veja uma breve [Apresentação do Projeto.](https://docs
 
 
 
-## 🛠️ Seção destinada a preparar o ambiente de desenvolvimento)
+## 🛠️ Seção destinada a preparar o ambiente de desenvolvimento (Não finalizada))
 
 A seguinte seção conterá as informações para configurar o ambiente de desenvolvimento e de como manter este projeto.
 ```
