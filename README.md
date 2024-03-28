@@ -84,15 +84,15 @@ ng serve
 ```
 localhost:4200/
 ```
-Ao visualizar a página inicial, acesse a opção Cadastro de Colaboradores, faça o seu cadastro e em seguida clique na barra de navegação e registre o seu ponto.
+11.Ao visualizar a página inicial, acesse a opção Cadastro de Colaboradores, faça o seu cadastro e em seguida clique na barra de navegação e registre o seu ponto.
 
 Para mais informações veja uma breve [Apresentação do Projeto.](https://docs.google.com/presentation/d/1lVBb2QoZPdWlsWUgMLOu0f7ERJL9qIXA74YjuFAK_Js/edit?usp=sharing)
 
 
 
-## 🛠️ Ambiente de desenvolvimento
+## 🛠️ Seção destinada a preparar o ambiente de desenvolvimento)
 
-Foram utilizadas as seguintes ferramentas para construir este projeto
+A seguinte seção conterá as informações para configurar o ambiente de desenvolvimento e de como manter este projeto.
 ```
 .NET: 8.0
 Angular: 17.0
@@ -105,7 +105,6 @@ Datagrip: 2023.4 (Ou SGBD de prefêrencia)
 ```
 
 
-## 📌 Versão
 
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+
 
